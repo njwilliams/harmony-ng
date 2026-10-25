@@ -1,0 +1,75 @@
+{
+  "version": "1.12.1",
+  "files": {
+    "bin/mips/codex_daemon": {
+      "size": 455656,
+      "md5": "93b185c06d742425d266ec9ae3b5f9b0",
+      "sha256": "361b42f6a992c4f608a29ef6d58b7b3195bc5bd74531d3b78c6a23b2b4c72958"
+    },
+    "bin/mips/codex_rf": {
+      "size": 263912,
+      "md5": "90e4566f345a121ffe332e6eebe85d01",
+      "sha256": "e86d241861c0acc0a22f29b27e0d03a8b335fa269dd29366686d6420727ee429"
+    },
+    "bin/mips/codex_dhcpd": {
+      "size": 104180,
+      "md5": "b8d0dbc380c42486384f418368ac2db8",
+      "sha256": "ba22c7d3dabdbbaa92173dd812d4a4d20d35f519d417d59cb2687335db0e8ed6"
+    },
+    "bin/mips/codex_portal": {
+      "size": 108888,
+      "md5": "12a25b890b73c1e93f5cb0f9e1bba12f",
+      "sha256": "d88267b0d6beb55e7787c868ec4dc615d0568f20fdcdfe7c9bb9541392201749"
+    },
+    "bin/mips/codex_sntp": {
+      "size": 180836,
+      "md5": "a7158a3856840d10c7e7df43619be74d",
+      "sha256": "0124283ddd29d6d8ffb186a5e4ff14767337c522f03da9b834275d1829eb51d8"
+    },
+    "bin/mips/codex_sync": {
+      "size": 99644,
+      "md5": "fd883d000e6fe5eb31dc2ddabbad6434",
+      "sha256": "58ecf224a6d4f5cb1a0757c3fac7215f7303e0c562918eede4be07e7b40b2d8e"
+    },
+    "bin/mips/mknod": {
+      "size": 100172,
+      "md5": "16aa93dedb3c8dd9defcd968b703d5ca",
+      "sha256": "faa25837a34e907cf5ff1201f9f121f34203a43f626b847ca9986e6cb3ac4026"
+    },
+    "bin/mips/register_ehci": {
+      "size": 104084,
+      "md5": "70473b13f0075a0f30fdbfe086561141",
+      "sha256": "f21d1bc41a203aee6da23ecdb8dd801abeaee62d9c3a7ae00cb5e34ee2b54aec"
+    },
+    "bin/mips/eth_fix": {
+      "size": 99764,
+      "md5": "d9957756e4fd9caae92c2435b78af56a",
+      "sha256": "99d535bb1e3737c3aa802951cebc091b580a657e5aa6beb6e10317c46c2014e7"
+    },
+    "bin/arm/codex_elite": {
+      "size": 787964,
+      "md5": "4fd4c65674bf13980cc4add2a634a730",
+      "sha256": "49aac75683ae113fd26deaff306b95b4d3a151c6fa613bd296f01e6d8204a54c"
+    },
+    "bin/arm/codex_elite.ota.gz": {
+      "size": 397871,
+      "md5": "c929913a000af112d0de1b7980ccd249",
+      "sha256": "a16ec234102b651ec5b21ea30a77de281cf206bf31072c546820da7b3de865d2"
+    },
+    "bin/arm/codex_sync": {
+      "size": 451664,
+      "md5": "e520caac5d879e8f5d0960dd1b08c6ab",
+      "sha256": "209fef9204f6cfd409228c1f6c010bda43b8a2b834775708411e48c58089ef3e"
+    },
+    "www.tar.gz": {
+      "size": 225276,
+      "md5": "8962d79ec6bfd62fc34ef605b0404b4b",
+      "sha256": "26123e00f977b6125cf3c0af7853f01160a48e44fb70ef59f352fb24c30253d5"
+    },
+    "hub_ota.tar.gz": {
+      "size": 2015836,
+      "md5": "2c9a7d1d5e633dc0012a7b75dbe57cee",
+      "sha256": "0f84b8b2733a177c689346468fe561984ee804c5c3590537d6f424fe44381cce"
+    }
+  }
+}
