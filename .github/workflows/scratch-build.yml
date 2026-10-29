@@ -1,0 +1,52 @@
+name: Scratch build
+on:
+  push:
+    branches: [ 'ci/**' ]
+jobs:
+  webui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '26'
+      - run: |
+          cd android-app && npm ci && npm run build && cd ..
+          mkdir -p payload/www
+          cp -rf android-app/dist/* payload/www/
+          python3 build/gzip_assets.py payload/www
+      - uses: actions/upload-artifact@v4
+        with:
+          name: www
+          path: payload/www/
+  elite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          mkdir -p build/toolchains
+          curl -sSL "https://toolchains.bootlin.com/downloads/releases/toolchains/armv5-eabi/tarballs/armv5-eabi--uclibc--stable-2017.05-toolchains-1-1.tar.bz2" | tar -xjf - -C build/toolchains/
+          chmod +x build/*.sh
+          ./build/compile_all.sh elite
+          ./build/build_busybox.sh arm
+          ls -l elite/bin
+      - uses: actions/upload-artifact@v4
+        with:
+          name: elite
+          path: elite/bin/
+  hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          mkdir -p build/toolchains
+          curl -sSL "https://toolchains.bootlin.com/downloads/releases/toolchains/mips32/tarballs/mips32--uclibc--stable-2017.05-toolchains-1-1.tar.bz2" | tar -xjf - -C build/toolchains/
+          chmod +x build/*.sh
+          ./build/compile_all.sh all
+          ./build/build_busybox.sh mips
+          [ -f tools/bin/dropbearmulti_mips ] && cp -f tools/bin/dropbearmulti_mips payload/bin/dropbearmulti || true
+          ls -l payload/bin
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hub
+          path: payload/bin/
